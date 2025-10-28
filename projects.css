@@ -1,0 +1,109 @@
+    body {
+      background-color: #2B2B2B;
+      color: #fff;
+    font-family: 'Instrument Serif', serif,  monospace;
+      margin: 0;
+      padding: 0;
+    }
+
+    .projects-page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+  color: #ffda79;
+    }
+
+    .section-subtext {
+      text-align: center;
+  color: #ffda79;
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: #141414;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 1.5rem;
+    }
+
+    .project-info h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .project-info p {
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .tags {
+      margin: 1rem 0;
+    }
+
+    .tags span {
+      background: #1e1e1e;
+      padding: 0.3rem 0.7rem;
+      margin-right: 0.4rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+    color: #ffda79;
+    }
+
+    .project-links a {
+      color: #00bfff;
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .project-links a:hover {
+      color: #1e90ff;
+    }
+
+    .back-button {
+      display: block;
+      text-align: center;
+      margin-top: 3rem;
+      text-decoration: none;
+  color: #ffda79;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      color: #1e90ff;
+    }

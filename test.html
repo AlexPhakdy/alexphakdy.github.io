@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lava Lamp Blob Test</title>
+  <style>
+    body {
+      background: #111; /* dark background to see the effect */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .blob-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: visible;
+      cursor: pointer;
+    }
+
+    .blob-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      position: relative;
+      z-index: 2;
+      display: block;
+    }
+
+    .blob {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 300%;
+      height: 300%;
+      background: linear-gradient(45deg, #ff0066, #6600ff, #00ffff);
+      filter: blur(50px);
+      animation: blobMove 8s infinite;
+      z-index: 1;
+      border-radius: 40% 60% 60% 40% / 55% 45% 55% 45%;
+      mix-blend-mode: screen;
+      opacity: 0.7;
+      transition: filter 0.3s ease;
+    }
+
+    @keyframes blobMove {
+      0%, 100% {
+        border-radius: 40% 60% 60% 40% / 55% 45% 55% 45%;
+        transform: translate(0, 0) scale(1);
+      }
+      50% {
+        border-radius: 60% 40% 40% 60% / 45% 55% 45% 55%;
+        transform: translate(30px, 20px) scale(1.1);
+      }
+    }
+
+    .blob-container:hover .blob {
+      transform: scale(1.3);
+      filter: blur(60px);
+    }
+  </style>
+</head>
+<body>
+  <div class="blob-container">
+    <img src="https://i.pravatar.cc/200" alt="Profile" />
+    <div class="blob"></div>
+  </div>
+</body>
+</html>

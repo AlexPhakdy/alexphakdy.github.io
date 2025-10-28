@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Phakdy | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="/script.js"></script>
+</head>
+<body>
+
+<div id="preloader">
+  <img src="assets/sig.png" alt="Signature" class="signature" />
+</div>
+
+
+      <!-- Top Navigation Bar -->
+      <div class="top-bar">
+        <img src="assets/sig.png" alt="AP Logo" class="logo" />
+        
+        <nav class="main-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      
+
+  <!-- Dot Navigation -->
+  <div class="dots-nav">
+    <button id="arrow-up" class="arrow">↑</button>
+    <a href="#home" class="active" data-section="home"></a>
+    <a href="#about" data-section="about"></a>
+    <a href="#projects" data-section="projects"></a>
+    <a href="#skills" data-section="skills"></a>
+    <a href="#resume" data-section="resume"></a>
+    <a href="#contact" data-section="contact"></a>
+    <button id="arrow-down" class="arrow">↓</button>
+  </div>
+
+  <!-- Scroll Container -->
+  <div class="scroll-container">
+
+    
+<section id="home" class="section landing">
+  <div class="content-row" style="display: flex; align-items: center; gap: 2rem;">
+    <div class="intro-text" style="flex: 1;">
+      <p class="fade-slide-up">Hi, I’m <span class="highlight">Alex.</span></p>
+      <div class="intro-subtext fade-slide-up">
+        <h2>Web Developer & UI/UX Designer</h2>
+      </div>
+<div class="intro-description fade-slide-up">
+  <p>Looking to build products that are not just functional,<br> but beautiful and thoughtful.</p>
+  <a href="#projects" class="btn full-width">View My Work</a>
+</div>
+    </div>
+
+    <!-- Blob container with profile image -->
+    <div class="blob-container" style="width: 400px; height: 400px; flex-shrink: 0;">
+      <img src="/assets/images/pfp.jpg" alt="Alex Profile" />
+      <div class="blob"></div>
+    </div>
+  </div>
+</section>
+
+      
+    
+      <section id="about" class="section about-section">
+        <div class="about-wrapper">
+      
+          <!-- Left: Traits -->
+          <div class="traits-column">
+            <h3><em>I’m a...</em></h3>
+            <ul>
+              <li>Creative Thinker</li>
+              <li>Frontend Developer</li>
+              <li>UI/UX Designer</li>
+              <li>Team Leader</li>
+              <li>Problem Solver</li>
+            </ul>
+          </div>
+      
+          <!-- Right: About Me Text -->
+          <div class="about-text">
+            <h1>About <span class="highlight">me.</span></h1>
+            <p>
+              I’m <strong>Alex Phakdy</strong>, a web developer and UI/UX designer passionate about
+              building clean, intuitive, and user-focused digital experiences. I recently graduated with a
+              B.S. in Computer Information Systems and a minor in Business from the University of South Carolina.
+              My work blends frontend development with thoughtful design, and I enjoy creating solutions
+              that are both functional and beautiful.
+            </p>
+          </div>
+      
+        </div>
+      </section>
+      
+<section id="projects" class="section projects-section">
+  <h1>Projects<span class="highlight">.</span></h1>
+  <p class="section-subtext">Some of my favorite work, combining design and functionality.</p>
+
+  <!-- Carousel Container -->
+  <div class="projects-carousel">
+    <div class="project-card">
+      <img src="assets/images/cover.png" alt="FreshePoke" />
+      <div class="project-info">
+        <h3>Freshe Poke</h3>
+        <p>Freshe Poke is a concept mobile app for a poke restaurant in Columbia, SC. It’s designed to make ordering fresh bowls simple, fun, and rewarding. Users can customize bowls, place orders ahead, 
+        and track loyalty rewards — all through a clean, intuitive interface.
+
+</p>
+        <div class="tags">
+          <span>#UIUX</span><span>#HTML</span><span>#CSS</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/AlexPhakdy/freshepoke-app" target="_blank">GitHub</a>
+          <a href="fp-case-study.html">Case Study</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="project-card">
+        <img src="assets/images/majorcover.png" alt="MajorHelp">
+        <div class="project-info">
+          <h3>MajorHelp</h3>
+          <p>Web app that helps students explore universities, majors, and tuition info with an interactive interface built using Django and responsive design.</p>
+          <div class="tags">
+            <span>#Python</span><span>#Django</span><span>#UIUX</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AlexPhakdy/majorhelpdeploy" target="_blank">GitHub</a>
+            <a href="https://majorhelpdeploy.onrender.com/" target="_blank">Demo</a>
+            <a href="https://github.com/AlexPhakdy/majorhelpdeploy/wiki/Design">View Design</a>
+          </div>
+        </div>
+      </div>
+
+             <!-- Project 3 -->
+            <div class="project-card">
+        <img src="assets/images/webcover.png" alt="web portfolio">
+        <div class="project-info">
+          <h3>Web Portfolio</h3>
+          <p>A modern portfolio website built to showcase my creativity, technical skills, and passion for crafting user-centered digital experiences.</p>
+          <div class="tags">
+          <span>#Figma</span><span>#HTML</span><span>#CSS</span><span>#Javascript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/AlexPhakdy/WebPortfolio" target="_blank">GitHub</a>
+            <a href="http://alexphakdy.github.io/">Demo</a>
+            <a href="http://alexphakdy.github.io/">View Design</a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="view-all-btn fade-slide-up">
+    <a href="projects.html" class="btn">View All Projects</a>
+  </div>
+</section>
+
+
+<section id="skills" class="section skills-section">
+  <div class="skills-wrapper">
+
+    <!-- Top Text -->
+    <div class="skills-text">
+      <h1>Skills<span class="highlight">.</span></h1>
+      <p>Languages, tools, and technologies I’m comfortable with.</p>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="assets/icons/github.svg" alt="GitHub" />
+        <p>GitHub</p>
+      </div>
+      <div class="skill-card">
+        <img src="assets/icons/git.svg" alt="Git" />
+        <p>Git</p>
+      </div>
+      <div class="skill-card">
+        <img src="assets/icons/javascript.svg" alt="Java" />
+        <p>Javascript</p>
+      </div>
+      <div class="skill-card">
+        <img src="assets/icons/django.svg" alt="Dart" />
+        <p>Django</p>
+      </div>
+            <div class="skill-card">
+        <img src="assets/icons/html5.svg" alt="Dart" />
+        <p>HTML</p>
+      </div>
+            <div class="skill-card">
+        <img src="assets/icons/css.svg" alt="Dart" />
+        <p>CSS</p>
+      </div>
+            <div class="skill-card">
+        <img src="assets/icons/figma.svg" alt="Dart" />
+        <p>Figma</p>
+      </div>
+            <div class="skill-card">
+        <img src="assets/icons/nodedotjs.svg" alt="Dart" />
+        <p>Node.js</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="resume" class="section resume-section">
+  <div class="resume-wrapper">
+    
+    <!-- Left Section -->
+    <div class="resume-intro">
+      <h1>Resume<span class="highlight">.</span></h1>
+      <p>This resume highlights my background in full-stack development, UI/UX design, 
+        and team collaboration on real-world projects.</p>
+
+      <p>Download or preview my resume and CV below.</p>
+
+      <div class="resume-buttons">
+        <a href="assets/files/AlexPhakdy_Resume.pdf" target="_blank" class="btn resume-btn">View/Download Resume PDF</a>
+        <a href="assets/files/AlexPhakdy_CV.pdf" target="_blank" class="btn resume-btn">View/Download CV PDF</a>
+      </div>
+      
+    </div>
+
+    <!-- Right Section -->
+    <div class="resume-previews">
+      <div class="preview-box">
+        <h3>Resume<span class="highlight">.</span></h3>
+        <iframe src="assets/files/AlexPhakdy_Resume.pdf" frameborder="0"></iframe>
+      </div>
+    </div>
+      <div class="preview-box">
+        <h3>CV<span class="highlight">.</span></h3>
+        <iframe src="assets/files/AlexPhakdy_CV.pdf" frameborder="0"></iframe>
+      </div>
+  </div>
+</section>
+
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-wrapper">
+    
+        <!-- Left: Info -->
+        <div class="contact-info">
+          <h1>Contact<span class="highlight">.</span></h1>
+          <p>Let’s get in touch — whether you’ve got an opportunity or just want to say hi.</p>
+    
+          <ul class="contact-list">
+            <li><span>📞</span> (864)-814-9137</li>
+            <li><span>✉️</span> akphakdy@gmail.com</li>
+            <li><span>🐙</span> <a href="https://github.com/AlexPhakdy" target="_blank">GitHub: AlexPhakdy</a></li>
+            <li><span>🔗</span> <a href="https://linkedin.com/in/akphak" target="_blank">LinkedIn: akphak</a></li>
+          </ul>
+        </div>
+    
+        <!-- Right: Form -->
+<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="82a6bd20-b130-46a0-b80d-2b9c57867b02">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+    
+      </div>
+    </section>
+    
+  </div>
+
+<!-- Scroll Down Indicator -->
+<div class="scroll-indicator">
+  <span>Scroll Down ↓</span>
+</div>
+
+  <!-- Dot Nav JS -->
+  <script>
+    const dots = document.querySelectorAll('.dots-nav a');
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          dots.forEach(dot => dot.classList.remove('active'));
+          const activeDot = document.querySelector(`.dots-nav a[data-section="${entry.target.id}"]`);
+          if (activeDot) activeDot.classList.add('active');
+        }
+      });
+    }, { threshold: 0.6 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+  <!-- Scroll Indicator -->
+  <script>
+  const scrollIndicator = document.querySelector('.scroll-indicator');
+  const lastSection = document.querySelector('#contact');
+
+  const hideObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        scrollIndicator.style.opacity = '0';
+      } else {
+        scrollIndicator.style.opacity = '0.7';
+      }
+    });
+  }, { threshold: 0.5 });
+
+  hideObserver.observe(lastSection);
+</script>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+<script>
+  // Grab all sections and the up/down arrow buttons
+  const sectionss = Array.from(document.querySelectorAll("section"));
+  const arrowUp = document.getElementById("arrow-up");
+  const arrowDown = document.getElementById("arrow-down");
+
+  // Find which section is currently visible
+  function getCurrentSection() {
+    let index = sectionss.findIndex(section => {
+      const rect = section.getBoundingClientRect();
+      return rect.top >= -100 && rect.top < window.innerHeight / 2;
+    });
+    return index === -1 ? 0 : index;
+  }
+
+  // Scroll down to next section
+  arrowDown.addEventListener("click", () => {
+    const currentIndex = getCurrentSection();
+    const next = sectionss[currentIndex + 1];
+    if (next) {
+      next.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+  // Scroll up to previous section
+  arrowUp.addEventListener("click", () => {
+    const currentIndex = getCurrentSection();
+    const prev = sections[currentIndex - 1];
+    if (prev) {
+      prev.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+</script>
+
+
+</body>
+</html>
