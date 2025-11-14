@@ -855,3 +855,223 @@ html, body {
   border-radius: 6px;
 }
 
+/* ------------------------------- */
+/* MOBILE FIXES (≤ 768px)         */
+/* ------------------------------- */
+@media (max-width: 768px) {
+
+  html, body {
+    overflow: auto;        /* allow scrolling normally */
+    scroll-snap-type: none; /* disable snapping on phones (too janky) */
+  }
+
+    .blob-container {
+    display: none;
+  }
+
+  .top-bar {
+    padding: 1.2rem 1.6rem;
+  }
+
+  .logo {
+    height: 55px;
+  }
+
+  /* Nav links stack or shrink */
+  .main-nav a {
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+  }
+
+  /* Dot navigation hidden on mobile */
+  .dots-nav {
+    display: none;
+  }
+
+  /* Intro Section */
+  .intro-text {
+    top: 15%;
+    left: 5%;
+    font-size: 30px;
+  }
+
+  .intro-text p {
+    font-size: 55px;
+  }
+
+  .intro-subtext {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+
+  .intro-description p {
+    font-size: 1.1rem;
+    margin-left: 0;
+  }
+
+  /* About */
+  .about-wrapper {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .traits-column {
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+
+  .about-text h1 {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
+  }
+
+  /* Contact */
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-info h1 {
+    font-size: 3rem;
+    margin-left: 0;
+  }
+
+  .contact-info p {
+    margin-left: 0;
+    font-size: 1.1rem;
+  }
+
+  .contact-list li {
+    margin-left: 0;
+  }
+
+  .contact-form {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* from 4 → 2 columns */
+    gap: 2rem;
+  }
+
+  .blob-container {
+    margin: 2rem auto;
+    width: 220px;
+    height: 220px;
+  }
+
+  /* Projects */
+  .project-card {
+    flex: 0 0 260px;
+  }
+
+  /* Resume */
+  .resume-wrapper {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .resume-intro h1 {
+    font-size: 3rem;
+  }
+
+  .resume-intro p {
+    font-size: 1.2rem;
+  }
+
+  .resume-previews {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .preview-box {
+    width: 90%;
+    height: 350px;
+  }
+
+    /* Stack content vertically and center */
+  #home .content-row {
+    flex-direction: column;       /* stack items */
+        justify-content: center;   /* vertical centering */
+    align-items: center;          /* center horizontally */
+    height: 100vh;
+    padding-top: 10rem;         /* move everything down slightly */
+    gap: 1rem;
+    padding: 2rem;                /* optional, give some breathing room */
+  }
+
+  #home .content-row {
+    justify-content: center;   /* vertical centering */
+    align-items: center;       /* horizontal centering */
+    height: 100vh;
+    padding-top: 10rem;         /* move everything down slightly */
+    gap: 1rem;
+  }
+  /* Intro text tweaks */
+  #home .intro-text {
+    position: static;
+    text-align: center;
+    top: auto;
+    left: auto;
+    font-size: 1.8rem;
+  }
+
+  #home .intro-text p {
+    font-size: 4rem;
+  }
+
+  #home .intro-subtext h2 {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  #home .intro-description p {
+    font-size: 1.1rem;
+  }
+
+  /* Center button */
+  #home .btn.full-width {
+    display: block;
+    margin: 1rem auto 0;
+    width: 200px;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* space between traits and text */
+  }
+
+  .traits-column {
+    border-right: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .about-text {
+    padding-left: 0;
+    text-align: center;
+  }
+
+    .about-text h1 {
+    padding-left: 0;
+    text-align: center;
+  }
+}
