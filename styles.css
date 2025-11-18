@@ -860,6 +860,16 @@ html, body {
 /* ------------------------------- */
 @media (max-width: 768px) {
 
+  .scroll-container {
+    scroll-snap-type: none; /* disables snap scrolling */
+  }
+
+  /* If you have individual sections with scroll-snap-align, reset them too */
+  .section {
+    scroll-snap-align: auto;
+    scroll-snap-stop: normal;
+  }
+  
   html, body {
     overflow: auto;        /* allow scrolling normally */
     scroll-snap-type: none; /* disable snapping on phones (too janky) */
@@ -1074,4 +1084,6 @@ html, body {
     padding-left: 0;
     text-align: center;
   }
+
+  
 }
