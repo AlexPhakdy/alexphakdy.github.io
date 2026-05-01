@@ -845,8 +845,12 @@ html, body {
   font-size: 0.95rem;
   color: var(--text);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--text-muted);
   transition: color var(--transition), border-color var(--transition);
+}
+.contact-list a::after {
+  content: ' ↗';
+  font-size: 0.8rem;
 }
 .contact-list a:hover {
   color: var(--accent);
