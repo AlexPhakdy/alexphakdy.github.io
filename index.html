@@ -17,8 +17,12 @@
       <!-- Top Navigation Bar -->
       <div class="top-bar">
         <img src="assets/sig.png" alt="AP Logo" class="logo" />
-        
-        <nav class="main-nav">
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -46,23 +50,20 @@
 
     
 <section id="home" class="section landing">
-  <div class="content-row" style="display: flex; align-items: center; gap: 2rem;">
-    <div class="intro-text" style="flex: 1;">
-      <p class="fade-slide-up">Hi, I’m <span class="highlight">Alex.</span></p>
-      <div class="intro-subtext fade-slide-up">
-        <h2>Web Developer & UI/UX Designer</h2>
-      </div>
-<div class="intro-description fade-slide-up">
-  <p>Looking to build products that are not just functional,<br> but beautiful and thoughtful.</p>
-  <a href="#projects" class="btn full-width">View My Work</a>
-</div>
+  <div class="hero-inner">
+    <span class="hero-eyebrow">Software Developer &amp; UI/UX Designer</span>
+    <h1 class="hero-headline">Hi, I’m <span class="hero-name">Alex.</span></h1>
+    <p class="hero-accent">
+      &mdash; <em>currently engineering FinTech platforms @ PenServ Planned Services,
+      where audit trails and access control aren’t optional.</em>
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn--solid">View My Work</a>
+      <a href="#contact" class="btn btn--ghost">Get in Touch</a>
     </div>
-
-    <!-- Blob container with profile image -->
-    <div class="blob-container" style="width: 400px; height: 400px; flex-shrink: 0;">
-      <img src="/assets/images/pfp.jpg" alt="Alex Profile" />
-      <div class="blob"></div>
-    </div>
+  </div>
+  <div class="hero-profile" tabindex="0" role="button" aria-label="Open contact">
+    <img src="/assets/images/pfp.jpg" alt="Alex Phakdy" />
   </div>
 </section>
 
@@ -76,23 +77,23 @@
             <h3><em>I’m a...</em></h3>
             <ul>
               <li>Creative Thinker</li>
-              <li>Frontend Developer</li>
+              <li>FinTech Engineer</li>
+              <li>Full-Stack Developer</li>
               <li>UI/UX Designer</li>
               <li>Team Leader</li>
               <li>Problem Solver</li>
             </ul>
           </div>
-      
+
           <!-- Right: About Me Text -->
           <div class="about-text">
             <h1>About <span class="highlight">me.</span></h1>
             <p>
-              I’m <strong>Alexander Phakdy</strong>, a web developer and UI/UX designer passionate about
-              building clean, intuitive, and user-focused digital experiences. I recently graduated with a
-              B.S. in Computer Information Systems and a minor in Business from the University of South Carolina.
-              My work blends frontend development with thoughtful design, and I enjoy creating solutions
-              that are both functional and beautiful.
+              I build <em class="highlight">full-stack web applications</em> for the kind of work
+              where audit trails and access control aren’t optional — currently shipping FinTech
+              tools at PenServ. B.S. in Computer Information Systems, University of South Carolina.
             </p>
+            <p class="about-tagline">Precision in the code, purpose in the design.</p>
           </div>
       
         </div>
@@ -156,6 +157,12 @@
       </div>
   </div>
 
+  <div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
   <div class="view-all-btn fade-slide-up">
     <a href="projects.html" class="btn">View All Projects</a>
   </div>
@@ -212,34 +219,66 @@
 
 
 <section id="resume" class="section resume-section">
-  <div class="resume-wrapper">
-    
-    <!-- Left Section -->
-    <div class="resume-intro">
-      <h1>Resume<span class="highlight">.</span></h1>
-      <p>This resume highlights my background in full-stack development, UI/UX design, 
-        and team collaboration on real-world projects.</p>
+  <div class="resume-wrap">
+    <div class="resume-grid">
 
-      <p>Download or preview my resume and CV below.</p>
-
-      <div class="resume-buttons">
-        <a href="assets/files/AlexPhakdy_Resume.pdf" target="_blank" class="btn resume-btn">View/Download Resume PDF</a>
-        <a href="assets/files/AlexPhakdy_CV.pdf" target="_blank" class="btn resume-btn">View/Download CV PDF</a>
+      <div class="resume-stack">
+        <h2 class="h-display">Resume<span class="it">.</span></h2>
+        <p class="resume-desc">
+          The work, the experience, the proof. Download the resume or browse the full CV for a deeper look.
+        </p>
+        <div class="resume-buttons">
+          <a class="btn btn--solid" href="assets/files/AlexPhakdy_Resume.pdf" target="_blank">View Resume</a>
+          <a class="btn btn--ghost" href="assets/files/AlexPhakdy_CV.pdf" target="_blank">View CV</a>
+        </div>
       </div>
-      
+
+      <div class="resume-mock">
+        <div class="doc">
+          <div class="doc-h">Alexander Phakdy</div>
+          <div class="doc-line med"></div>
+          <div class="doc-line short"></div>
+          <div class="doc-block">
+            <span class="doc-k">Education</span>
+            <div class="doc-line"></div>
+            <div class="doc-line med"></div>
+          </div>
+          <div class="doc-block">
+            <span class="doc-k">Experience</span>
+            <div class="doc-line"></div>
+            <div class="doc-line"></div>
+            <div class="doc-line med"></div>
+            <div class="doc-line"></div>
+            <div class="doc-line short"></div>
+          </div>
+          <div class="doc-block">
+            <span class="doc-k">Skills</span>
+            <div class="doc-line med"></div>
+            <div class="doc-line short"></div>
+          </div>
+        </div>
+        <div class="doc">
+          <div class="doc-h">Page 2</div>
+          <div class="doc-block">
+            <span class="doc-k">Projects</span>
+            <div class="doc-line"></div>
+            <div class="doc-line med"></div>
+            <div class="doc-line"></div>
+            <div class="doc-line short"></div>
+          </div>
+          <div class="doc-block">
+            <span class="doc-k">Certifications</span>
+            <div class="doc-line med"></div>
+            <div class="doc-line short"></div>
+          </div>
+          <div class="doc-block">
+            <span class="doc-k">References</span>
+            <div class="doc-line short"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
-
-    <!-- Right Section -->
-    <div class="resume-previews">
-      <div class="preview-box">
-        <h3>Resume<span class="highlight">.</span></h3>
-        <iframe src="assets/files/AlexPhakdy_Resume.pdf" frameborder="0"></iframe>
-      </div>
-    </div>
-      <div class="preview-box">
-        <h3>CV<span class="highlight">.</span></h3>
-        <iframe src="assets/files/AlexPhakdy_CV.pdf" frameborder="0"></iframe>
-      </div>
   </div>
 </section>
 
@@ -249,25 +288,37 @@
     
         <!-- Left: Info -->
         <div class="contact-info">
-          <h1>Contact<span class="highlight">.</span></h1>
+          <h1 class="h-display">Contact<span class="it">.</span></h1>
           <p>Let’s get in touch — whether you’ve got an opportunity or just want to say hi.</p>
-    
+
           <ul class="contact-list">
-            <li><span>📞</span> (864)-814-9137</li>
-            <li><span>✉️</span> akphakdy@gmail.com</li>
-            <li><span>🐙</span> <a href="https://github.com/AlexPhakdy" target="_blank">GitHub: AlexPhakdy</a></li>
-            <li><span>🔗</span> <a href="https://linkedin.com/in/akphak" target="_blank">LinkedIn: akphak</a></li>
+            <li>
+              <span class="contact-label">Phone</span>
+              <span>(864) 814-9137</span>
+            </li>
+            <li>
+              <span class="contact-label">Email</span>
+              <a href="mailto:akphakdy@gmail.com">akphakdy@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/AlexPhakdy" target="_blank">AlexPhakdy</a>
+            </li>
+            <li>
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/akphak" target="_blank">akphak</a>
+            </li>
           </ul>
         </div>
-    
+
         <!-- Right: Form -->
-<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="82a6bd20-b130-46a0-b80d-2b9c57867b02">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="82a6bd20-b130-46a0-b80d-2b9c57867b02">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
 
     
       </div>
@@ -361,6 +412,25 @@
   });
 </script>
 
+<script>
+  const carouselEl = document.querySelector('.projects-carousel');
+  const carouselCards = Array.from(carouselEl.querySelectorAll('.project-card'));
+  const carouselDots = Array.from(document.querySelectorAll('.carousel-dots .dot'));
+
+  function updateDots() {
+    const scrollLeft = carouselEl.scrollLeft;
+    let closest = 0;
+    let minDist = Infinity;
+    carouselCards.forEach((card, i) => {
+      const dist = Math.abs(card.offsetLeft - scrollLeft);
+      if (dist < minDist) { minDist = dist; closest = i; }
+    });
+    carouselDots.forEach((d, i) => d.classList.toggle('active', i === closest));
+  }
+
+  carouselEl.addEventListener('scroll', updateDots, { passive: true });
+  updateDots();
+</script>
 
 </body>
 </html>

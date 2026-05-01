@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/alexander.phakdy/.claude/projects/c--Users-alexander-phakdy-Penserv-Projects-alexphakdy-github-io/memory/**)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\alexander.phakdy\\.claude\\projects\\c--Users-alexander-phakdy-Penserv-Projects-alexphakdy-github-io\\memory"
+    ]
+  }
+}
