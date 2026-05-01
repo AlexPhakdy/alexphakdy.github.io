@@ -64,6 +64,11 @@ html, body {
   50%       { transform: translateY(-10px); }
 }
 
+@keyframes writeReveal {
+  0%   { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 0% 0 0); }
+}
+
 /* ── Preloader ── */
 #preloader {
   position: fixed;
@@ -79,7 +84,6 @@ html, body {
 .signature {
   width: 180px;
   opacity: 0;
-  transform: translateY(16px);
   filter: invert(1);
   animation: fadeSlideUp 1.6s ease forwards;
 }
