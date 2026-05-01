@@ -32,6 +32,25 @@ html, body {
   color: var(--text);
 }
 
+/* Subtext: use the Syne sans variable for secondary text across the site */
+.hero-eyebrow,
+.hero-accent,
+.about-tagline,
+.section-subtext,
+.project-info p,
+.project-info .tags,
+.tags span,
+.intro-description p,
+.contact-info p,
+.contact-list li,
+.traits-column li,
+.skills-text p,
+.resume-desc,
+.doc p {
+  font-family: var(--sans);
+}
+
+
 /* ── Scroll container ── */
 .scroll-container {
   height: 100vh;
@@ -306,7 +325,7 @@ html, body {
 }
 
 .hero-accent {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(0.95rem, 1.6vw, 1.9rem);
   font-style: italic;
   color: var(--text-muted);
@@ -421,7 +440,7 @@ html, body {
 }
 
 .about-tagline {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(1rem, 1.6vw, 1.3rem) !important;
   color: var(--text-muted) !important;
   font-style: italic;
@@ -688,7 +707,7 @@ html, body {
 }
 
 .resume-desc {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(1rem, 1.5vw, 1.35rem);
   line-height: 1.55;
   color: var(--text-muted);
