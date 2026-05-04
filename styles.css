@@ -428,7 +428,7 @@ html, body {
 }
 
 .about-text p {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(1.3rem, 2.2vw, 1.75rem);
   color: var(--text);
   line-height: 1.6;
@@ -440,7 +440,7 @@ html, body {
 }
 
 .about-tagline {
-  font-family: var(--sans);
+  font-family: var(--sans) !important;
   font-size: clamp(1rem, 1.6vw, 1.3rem) !important;
   color: var(--text-muted) !important;
   font-style: italic;
