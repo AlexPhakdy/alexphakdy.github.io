@@ -191,6 +191,95 @@ html, body {
 .main-nav a.active { color: var(--accent); }
 .main-nav a.active::after { width: 100%; left: 0; background: var(--accent); }
 
+/* ── Nav group (nav + theme toggle + hamburger) ── */
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ── Theme toggle ── */
+.theme-toggle {
+  background: none;
+  border: 1px solid rgba(0,0,0,0.22);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+.theme-toggle:hover {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+[data-theme="dark"] .theme-toggle {
+  border-color: rgba(240,237,232,0.25);
+}
+
+/* ── Dark mode ── */
+[data-theme="dark"] {
+  --bg:         #141414;
+  --surface:    #1e1e1e;
+  --text:       #f0ede8;
+  --text-muted: #9a9390;
+  --border:     #2e2e2e;
+}
+[data-theme="dark"] .top-bar {
+  background: rgba(20, 20, 20, 0.85);
+}
+[data-theme="dark"] .btn--ghost {
+  border-color: rgba(240,237,232,0.3);
+}
+[data-theme="dark"] .dots-nav a {
+  background: rgba(255,255,255,0.28);
+}
+[data-theme="dark"] .dots-nav .arrow {
+  border-color: rgba(255,255,255,0.28);
+}
+[data-theme="dark"] .tags span {
+  background: #252525;
+}
+[data-theme="dark"] .doc-line {
+  background: #2e2e2e;
+}
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form textarea {
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+}
+[data-theme="dark"] .now-card {
+  background: #1e1e1e;
+}
+[data-theme="dark"] .main-nav {
+  background: rgba(20, 20, 20, 0.97);
+}
+[data-theme="dark"] .logo {
+  filter: invert(1);
+}
+
+/* ── Dark mode reveal transition ── */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+  animation: theme-reveal 0.5s cubic-bezier(.4, 0, .2, 1) forwards;
+}
+[data-theme="dark"]::view-transition-new(root) {
+  animation: theme-reveal 0.5s cubic-bezier(.4, 0, .2, 1) forwards;
+}
+@keyframes theme-reveal {
+  from { clip-path: circle(0% at var(--theme-x, 95%) var(--theme-y, 2%)); }
+  to   { clip-path: circle(150% at var(--theme-x, 95%) var(--theme-y, 2%)); }
+}
+
 /* ── Dot navigation ── */
 .dots-nav {
   position: fixed;
