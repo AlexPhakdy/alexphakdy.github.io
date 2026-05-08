@@ -127,10 +127,38 @@ html, body {
   z-index: 1000;
 }
 
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
 .logo {
   height: 48px;
   width: auto;
   object-fit: contain;
+}
+
+.logo-meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-name {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.logo-role {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
 }
 
 .main-nav a {
@@ -160,6 +188,8 @@ html, body {
 
 .main-nav a:hover { color: var(--text); }
 .main-nav a:hover::after { width: 100%; left: 0; }
+.main-nav a.active { color: var(--accent); }
+.main-nav a.active::after { width: 100%; left: 0; background: var(--accent); }
 
 /* ── Dot navigation ── */
 .dots-nav {
@@ -186,6 +216,22 @@ html, body {
 .dots-nav a.active {
   background: var(--accent);
   transform: scale(1.7);
+}
+
+.dots-nav.on-dark a {
+  background: rgba(255,255,255,0.4);
+}
+.dots-nav.on-dark a.active {
+  background: var(--accent);
+}
+.dots-nav.on-dark .arrow {
+  border-color: rgba(255,255,255,0.4);
+  color: #fff;
+}
+.dots-nav.on-dark .arrow:hover {
+  background: #fff;
+  color: var(--dark);
+  border-color: #fff;
 }
 
 .dots-nav .arrow {
@@ -268,6 +314,29 @@ html, body {
   background: var(--text);
   color: var(--bg);
   border-color: var(--text);
+}
+
+/* ── Section label ── */
+.sec-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.sec-num {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+.sec-kicker {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
 }
 
 /* ── Highlight ── */
@@ -448,10 +517,77 @@ html, body {
   line-height: 1.4 !important;
 }
 
+/* ── NOW STRIP ── */
+.now-strip {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem 2rem 3rem;
+  margin-top: 1rem;
+}
+
+.now-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.now-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.now-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.now-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.now-card-label {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+
+.now-card p {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .now-cards { grid-template-columns: 1fr; }
+  .now-strip { padding: 2.5rem 0 1.5rem; }
+}
+
 /* ── PROJECTS ── */
 .projects-section {
   text-align: center;
-  padding-top: 5rem;
+  padding-top: 3rem;
+  padding-left: clamp(2rem, 6vw, 8rem);
+  padding-right: clamp(2rem, 6vw, 8rem);
+  align-items: center;
+}
+
+.projects-section .sec-label {
+  justify-content: center;
+  margin-bottom: 0.25rem;
+  margin-top: 1rem;
 }
 
 .projects-section h1 {
@@ -582,6 +718,108 @@ html, body {
   border-color: var(--accent);
 }
 
+/* ── HOVER-REVEAL PROJECTS ── */
+.proj-hover {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.proj-rows {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.proj-row {
+  display: flex;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: opacity 0.25s ease, padding-left 0.25s ease;
+}
+
+.proj-row.is-dim { opacity: 0.28; }
+.proj-row.is-active { padding-left: 0.5rem; }
+
+.proj-num {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  flex: 0 0 4rem;
+  padding-top: 0.4rem;
+}
+
+.proj-title {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.6vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text);
+  transition: color 0.3s ease, transform 0.4s cubic-bezier(.2,.8,.2,1);
+  padding-left: 1rem;
+  margin-right: auto;
+  display: inline-block;
+  transform: skewX(0deg);
+}
+.proj-row.is-active .proj-title {
+  color: var(--accent);
+  transform: skewX(-10deg);
+}
+
+.proj-role {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  align-self: center;
+}
+
+.proj-year {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-left: 2rem;
+  align-self: center;
+}
+
+.proj-arrow {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-left: 1.25rem;
+  align-self: center;
+  transition: transform 0.25s ease;
+}
+.proj-row.is-active .proj-arrow { transform: translate(3px, -3px); }
+
+.proj-preview {
+  position: fixed;
+  width: 280px;
+  aspect-ratio: 16 / 10;
+  pointer-events: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 500;
+  translate: 20px -50%;
+}
+.proj-preview.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.proj-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ── SKILLS ── */
 .skills-section {
   background: var(--dark);
@@ -610,7 +848,7 @@ html, body {
 .skills-text p {
   font-family: var(--sans);
   font-size: 0.85rem;
-  color: rgba(240,237,232,0.5);
+  color: rgba(240,237,232,0.75);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin: 0;
@@ -953,7 +1191,9 @@ html, body {
     align-items: flex-end;
     padding-bottom: 0.75rem;
   }
-  .logo { height: 40px; }
+  .logo { height: 36px; }
+  .logo-name { font-size: 0.82rem; }
+  .logo-role { font-size: 0.65rem; }
   .nav-toggle { display: flex; }
 
   .main-nav {
@@ -1042,6 +1282,10 @@ html, body {
   .traits-column ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.25rem; }
   .traits-column li { margin-bottom: 0; }
   .projects-section { padding-top: 3.5rem; }
+  .proj-preview { display: none; }
+  .proj-title { font-size: clamp(1.6rem, 8vw, 2.4rem); }
+  .proj-role, .proj-year { display: none; }
+  .proj-num { flex: 0 0 2.5rem; }
   .projects-carousel {
     justify-content: flex-start;
     scroll-snap-type: x mandatory;
