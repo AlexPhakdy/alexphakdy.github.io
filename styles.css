@@ -434,12 +434,13 @@ html, body {
 .about-section {
   background: var(--bg);
   padding-top: var(--nav-h);
+  padding-bottom: var(--nav-h);
 }
 
 .about-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   max-width: 1200px;
   width: 100%;
   padding: 0 2rem;
@@ -447,16 +448,15 @@ html, body {
 }
 
 .traits-column {
-  flex: 0 0 230px;
+  flex: 0 0 270px;
   padding-right: 2.5rem;
   border-right: 1px solid var(--border);
-  align-self: flex-start;
-  padding-top: 0.5rem;
+  padding-top: 3.2rem;
 }
 
 .traits-column h3 {
   font-family: var(--serif);
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 400;
   font-style: italic;
   color: var(--text-muted);
@@ -471,7 +471,7 @@ html, body {
 
 .traits-column li {
   font-family: var(--sans);
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--text-muted);
   margin-bottom: 1rem;
   cursor: default;
@@ -485,6 +485,11 @@ html, body {
 
 .about-text {
   flex: 1;
+  padding-top: 1.5rem;
+}
+
+.about-text .sec-label {
+  justify-content: flex-end;
 }
 
 .about-text h1 {
@@ -498,7 +503,7 @@ html, body {
 
 .about-text p {
   font-family: var(--sans);
-  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
   color: var(--text);
   line-height: 1.6;
 }
@@ -521,7 +526,7 @@ html, body {
 .now-strip {
   width: 100%;
   max-width: 1200px;
-  padding: 2rem 2rem 3rem;
+  padding: 1.5rem 2rem 1.5rem;
   margin-top: 1rem;
 }
 
@@ -563,11 +568,52 @@ html, body {
 }
 
 .now-card p {
-  font-family: var(--sans);
+  font-family: var(--sans), 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 0.9rem;
   color: var(--text);
   line-height: 1.6;
   margin: 0;
+}
+
+.now-card p a {
+  font-family: var(--sans), 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--text-muted);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.now-card p a::after {
+  content: ' ↗';
+  font-size: 0.8rem;
+}
+
+.now-card p a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.now-card p em {
+  display: none;
+}
+
+.now-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
 }
 
 @media (max-width: 768px) {
